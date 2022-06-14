@@ -1,0 +1,25 @@
+version: '3.5'
+
+services:
+
+  e-shop.db:
+    container_name: e-shop.db
+    image: postgres:14.3-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-eShopDbUser}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-secret}
+    ports:
+      - '5442:5432'
+    volumes:
+      - e-shop.db:/var/lib/postgresql/data
+    networks:
+      - e-shop-network
+
+volumes:
+  e-shop.db:
+    driver: local
+
+networks:
+  e-shop-network:
+    name: e-shop-network
