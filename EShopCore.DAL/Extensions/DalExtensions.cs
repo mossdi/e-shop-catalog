@@ -9,7 +9,7 @@ public static class DalExtensions
     public static IServiceCollection UseDataAccessLayer(this IServiceCollection services)
     {
         IConfiguration config = new ConfigurationBuilder()
-            .AddJsonFile("dbSettings.json")
+            .AddJsonFile($"{Directory.GetCurrentDirectory()}/dbSettings.json")
             .AddEnvironmentVariables()
             .Build();
 
