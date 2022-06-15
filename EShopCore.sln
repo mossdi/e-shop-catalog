@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShopCore.Console", "EShopC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShopCore.DAL", "EShopCore.DAL\EShopCore.DAL.csproj", "{8A08CD10-CE23-4C12-B08D-4F0969868EA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShopCore.Domain", "EShopCore.Domain\EShopCore.Domain.csproj", "{0B441527-89B9-43B8-A3D7-66820515CE31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShopCore.Common", "EShopCore.Common\EShopCore.Common.csproj", "{0B441527-89B9-43B8-A3D7-66820515CE31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

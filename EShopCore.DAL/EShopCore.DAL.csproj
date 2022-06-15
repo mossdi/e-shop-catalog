@@ -25,7 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\EShopCore.Domain\EShopCore.Domain.csproj" />
+      <ProjectReference Include="..\EShopCore.Common\EShopCore.Common.csproj" />
     </ItemGroup>
 
 </Project>
