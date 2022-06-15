@@ -1,5 +1,5 @@
-﻿using EShopCore.DAL.Dto;
-using EShopCore.DAL.Extensions;
+﻿using EShopCore.DAL.Extensions;
+using EShopCore.Domain.Dto;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 

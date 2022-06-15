@@ -1,6 +1,6 @@
 namespace EShopCore.DAL.Extensions;
 
-using Dto;
+using Domain.Dto;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
