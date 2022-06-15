@@ -3,9 +3,9 @@ namespace EShopCore.DAL;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 
-internal class DataAccessLayerDbContext: DbContext
+internal class DataAccessDbContext: DbContext
 {
-    public DataAccessLayerDbContext(DbContextOptions<DataAccessLayerDbContext> options) : base(options)
+    public DataAccessDbContext(DbContextOptions<DataAccessDbContext> options) : base(options)
     {
     }
 

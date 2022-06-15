@@ -8,7 +8,7 @@ var host = Host
     .ConfigureServices((builder, services) =>
     {
         services.UseDataAccessLayer(
-            new DataAccessLayerConfiguration(builder.Configuration.GetConnectionString("DefaultConnection")));
+            new DataAccessConfiguration(builder.Configuration.GetConnectionString("DefaultConnection")));
     })
     .Build();
     

@@ -1,10 +1,10 @@
 namespace EShopCore.DAL.Dto;
 
-public class DataAccessLayerConfiguration
+public class DataAccessConfiguration
 {
     public string ConnectionString { get; }
 
-    public DataAccessLayerConfiguration(string connectionString)
+    public DataAccessConfiguration(string connectionString)
     {
         ConnectionString = connectionString;
     }
