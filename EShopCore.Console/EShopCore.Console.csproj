@@ -19,4 +19,10 @@
       <ProjectReference Include="..\EShopCore.DAL\EShopCore.DAL.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
