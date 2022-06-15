@@ -4,6 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>EShop.Catalog.DAL</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -22,10 +23,11 @@
 
     <ItemGroup>
       <Folder Include="Dto" />
+      <Folder Include="Migrations" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\EShopCore.Common\EShopCore.Common.csproj" />
+      <ProjectReference Include="..\EShop.Catalog.Common\EShop.Catalog.Common.csproj" />
     </ItemGroup>
 
 </Project>

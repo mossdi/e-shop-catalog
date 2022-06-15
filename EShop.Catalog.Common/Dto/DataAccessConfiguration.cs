@@ -1,4 +1,4 @@
-namespace EShopCore.Domain.Dto;
+namespace EShop.Catalog.Domain.Dto;
 
 public class DataAccessConfiguration
 {

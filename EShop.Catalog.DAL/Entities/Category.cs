@@ -1,4 +1,4 @@
-namespace EShopCore.DAL.Entities;
+namespace EShop.Catalog.DAL.Entities;
 
 using Contracts;
 

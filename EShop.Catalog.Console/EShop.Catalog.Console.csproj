@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <RootNamespace>EShopCore</RootNamespace>
+        <RootNamespace>EShop.Catalog</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\EShopCore.DAL\EShopCore.DAL.csproj" />
+      <ProjectReference Include="..\EShop.Catalog.DAL\EShop.Catalog.DAL.csproj" />
     </ItemGroup>
 
     <ItemGroup>

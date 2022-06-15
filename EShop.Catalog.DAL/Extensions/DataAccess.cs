@@ -1,4 +1,4 @@
-namespace EShopCore.DAL.Extensions;
+namespace EShop.Catalog.DAL.Extensions;
 
 using Domain.Dto;
 using Microsoft.EntityFrameworkCore;

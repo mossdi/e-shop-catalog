@@ -1,4 +1,4 @@
-namespace EShopCore.DAL.Contracts;
+namespace EShop.Catalog.DAL.Contracts;
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
