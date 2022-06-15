@@ -9,14 +9,14 @@ internal class DataAccessDbContext: DbContext
     {
     }
 
-    public DbSet<Product> Users { get; set; }
-    public DbSet<Category> Profiles { get; set; }
-    public DbSet<ProductCategory> Roles { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<ProductCategory> ProductCategories { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Product>().ToTable(name: "products");
         modelBuilder.Entity<Category>().ToTable(name: "categories");
-        modelBuilder.Entity<ProductCategory>().ToTable(name: "roles");
+        modelBuilder.Entity<ProductCategory>().ToTable(name: "product_categories");
     }
 }
