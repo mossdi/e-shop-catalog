@@ -11,3 +11,5 @@ var host = Host
             new DataAccessLayerConfiguration(builder.Configuration.GetConnectionString("DefaultConnection")));
     })
     .Build();
+    
+host.Run();
