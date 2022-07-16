@@ -163,6 +163,8 @@ namespace EShop.Catalog.DAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ManufacturerId");
+
                     b.ToTable("products", (string)null);
                 });
 
@@ -200,6 +202,17 @@ namespace EShop.Catalog.DAL.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("product_categories", (string)null);
+                });
+
+            modelBuilder.Entity("EShop.Catalog.DAL.Entities.Product", b =>
+                {
+                    b.HasOne("EShop.Catalog.DAL.Entities.Manufacturer", "Manufacturer")
+                        .WithMany()
+                        .HasForeignKey("ManufacturerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Manufacturer");
                 });
 
             modelBuilder.Entity("EShop.Catalog.DAL.Entities.ProductCategory", b =>

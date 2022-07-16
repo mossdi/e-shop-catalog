@@ -10,4 +10,9 @@ public class Product : BaseEntity
 
     [Column("description")]
     public string? Description { get; set; }
+    
+    [Column("manufacturer_id")]
+    public Guid ManufacturerId { get; set; }
+    
+    public virtual Manufacturer Manufacturer { get; set; }
 }
