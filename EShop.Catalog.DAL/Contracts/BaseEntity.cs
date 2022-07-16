@@ -17,4 +17,9 @@ public abstract class BaseEntity
 
     [Column("deleted_at")]
     public DateTimeOffset? DeletedAt { get; set; }
+
+    protected BaseEntity()
+    {
+        Id = Guid.NewGuid();
+    }
 }
