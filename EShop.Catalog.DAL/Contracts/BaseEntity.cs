@@ -3,7 +3,7 @@ namespace EShop.Catalog.DAL.Contracts;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-internal abstract class BaseEntity
+public abstract class BaseEntity
 {
     [Key]
     [Column("id")]

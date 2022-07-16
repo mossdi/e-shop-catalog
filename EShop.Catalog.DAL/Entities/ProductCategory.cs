@@ -3,7 +3,7 @@ namespace EShop.Catalog.DAL.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
 using Contracts;
 
-internal class ProductCategory : BaseEntity
+public class ProductCategory : BaseEntity
 {
     [Column("product_id")]
     public Guid ProductId { get; set; }
