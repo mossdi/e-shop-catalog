@@ -1,5 +1,6 @@
 namespace EShop.Catalog.DAL;
 
+using Configuration;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,8 @@ internal class DataAccessDbContext: DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+
         modelBuilder.Entity<Product>().ToTable(name: "products");
         modelBuilder.Entity<Category>().ToTable(name: "categories");
         modelBuilder.Entity<ProductCategory>().ToTable(name: "product_categories");
