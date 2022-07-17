@@ -20,6 +20,7 @@ internal class DataAccessDbContext: DbContext
         modelBuilder.ApplyConfiguration(new CategoryConfiguration());
         modelBuilder.ApplyConfiguration(new ManufacturerConfiguration());
         modelBuilder.ApplyConfiguration(new ProductConfiguration());
+        modelBuilder.ApplyConfiguration(new ProductCategoryConfiguration());
 
         modelBuilder.Entity<Product>().ToTable(name: "products");
         modelBuilder.Entity<Category>().ToTable(name: "categories");
