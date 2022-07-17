@@ -9,5 +9,5 @@ public class Manufacturer : BaseEntity
     public string Name { get; set; }
     
     [Column("description")]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 }

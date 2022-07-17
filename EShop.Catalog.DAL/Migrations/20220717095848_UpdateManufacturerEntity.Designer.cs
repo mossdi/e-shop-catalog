@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EShop.Catalog.DAL.Migrations
 {
     [DbContext(typeof(DataAccessDbContext))]
-    [Migration("20220716125405_AddColumnManufacturerIdToProductsTable")]
-    partial class AddColumnManufacturerIdToProductsTable
+    [Migration("20220717095848_UpdateManufacturerEntity")]
+    partial class UpdateManufacturerEntity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -113,7 +113,6 @@ namespace EShop.Catalog.DAL.Migrations
                         .HasColumnName("deleted_at");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("description");
 

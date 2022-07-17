@@ -3,6 +3,7 @@ using System;
 using EShop.Catalog.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EShop.Catalog.DAL.Migrations
 {
     [DbContext(typeof(DataAccessDbContext))]
-    partial class DataAccessDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220717100647_ManufacturerSeedingData")]
+    partial class ManufacturerSeedingData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -184,6 +186,10 @@ namespace EShop.Catalog.DAL.Migrations
                         .HasColumnType("text")
                         .HasColumnName("description");
 
+                    b.Property<Guid>("ManufacturerId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("manufacturer_id");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text")
@@ -234,6 +240,17 @@ namespace EShop.Catalog.DAL.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("product_categories", (string)null);
+                });
+
+            modelBuilder.Entity("EShop.Catalog.DAL.Entities.Product", b =>
+                {
+                    b.HasOne("EShop.Catalog.DAL.Entities.Manufacturer", "Manufacturer")
+                        .WithMany()
+                        .HasForeignKey("ManufacturerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Manufacturer");
                 });
 
             modelBuilder.Entity("EShop.Catalog.DAL.Entities.ProductCategory", b =>

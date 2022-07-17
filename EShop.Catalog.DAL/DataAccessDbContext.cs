@@ -18,6 +18,7 @@ internal class DataAccessDbContext: DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+        modelBuilder.ApplyConfiguration(new ManufacturerConfiguration());
 
         modelBuilder.Entity<Product>().ToTable(name: "products");
         modelBuilder.Entity<Category>().ToTable(name: "categories");
