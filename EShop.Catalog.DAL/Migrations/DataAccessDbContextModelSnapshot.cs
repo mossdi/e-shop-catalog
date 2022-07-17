@@ -184,6 +184,10 @@ namespace EShop.Catalog.DAL.Migrations
                         .HasColumnType("text")
                         .HasColumnName("description");
 
+                    b.Property<Guid>("ManufacturerId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("manufacturer_id");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text")
