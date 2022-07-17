@@ -3,6 +3,7 @@ using System;
 using EShop.Catalog.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EShop.Catalog.DAL.Migrations
 {
     [DbContext(typeof(DataAccessDbContext))]
-    partial class DataAccessDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220717114604_AddForeignKeyManufacturerIdToProductsTable")]
+    partial class AddForeignKeyManufacturerIdToProductsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -202,49 +204,6 @@ namespace EShop.Catalog.DAL.Migrations
                     b.HasIndex("ManufacturerId");
 
                     b.ToTable("products", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("d11cfe18-d46e-4c85-a726-dd41aca37b99"),
-                            CreatedAt = new DateTimeOffset(new DateTime(2022, 7, 17, 13, 3, 18, 771, DateTimeKind.Unspecified).AddTicks(7640), new TimeSpan(0, 3, 0, 0, 0)),
-                            Description = "Part of Kremona's Flamenco Series, the Rosa Morena's subtle flamenco design elements enable snap and spontaneity, while its Indian rosewood and European spruce construct conveys the stately depth of a concert classical. Other appointments include a bone nut and saddle, wood binding and rosette, and a gold machines with pearloid buttons.",
-                            ManufacturerId = new Guid("b3964f15-ddcc-4582-bcca-43ec7c31e1c2"),
-                            Name = "Kremona Rosa Morena",
-                            UpdatedAt = new DateTimeOffset(new DateTime(2022, 7, 17, 13, 3, 18, 771, DateTimeKind.Unspecified).AddTicks(7640), new TimeSpan(0, 3, 0, 0, 0))
-                        },
-                        new
-                        {
-                            Id = new Guid("45458fa1-c499-4c60-b373-072d7fa12fb0"),
-                            CreatedAt = new DateTimeOffset(new DateTime(2022, 7, 17, 13, 3, 18, 771, DateTimeKind.Unspecified).AddTicks(7640), new TimeSpan(0, 3, 0, 0, 0)),
-                            ManufacturerId = new Guid("03618b30-ffa1-44cb-8bd7-94e1bab58ece"),
-                            Name = "Remo Mondo Djembe 14\" Adinkra",
-                            UpdatedAt = new DateTimeOffset(new DateTime(2022, 7, 17, 13, 3, 18, 771, DateTimeKind.Unspecified).AddTicks(7640), new TimeSpan(0, 3, 0, 0, 0))
-                        },
-                        new
-                        {
-                            Id = new Guid("81675ffa-c0cd-4c60-bd12-8368f08dedf4"),
-                            CreatedAt = new DateTimeOffset(new DateTime(2022, 7, 17, 13, 3, 18, 771, DateTimeKind.Unspecified).AddTicks(7640), new TimeSpan(0, 3, 0, 0, 0)),
-                            ManufacturerId = new Guid("13e22dc8-e1e1-489f-a618-9dae375bdace"),
-                            Name = "Casio Celviano AP-470",
-                            UpdatedAt = new DateTimeOffset(new DateTime(2022, 7, 17, 13, 3, 18, 771, DateTimeKind.Unspecified).AddTicks(7640), new TimeSpan(0, 3, 0, 0, 0))
-                        },
-                        new
-                        {
-                            Id = new Guid("d2406749-4588-4c95-8849-e82c9a38768f"),
-                            CreatedAt = new DateTimeOffset(new DateTime(2022, 7, 17, 13, 3, 18, 771, DateTimeKind.Unspecified).AddTicks(7640), new TimeSpan(0, 3, 0, 0, 0)),
-                            ManufacturerId = new Guid("c828b3d4-c478-427f-82d6-bffc681626b9"),
-                            Name = "Moog Subsequent 37",
-                            UpdatedAt = new DateTimeOffset(new DateTime(2022, 7, 17, 13, 3, 18, 771, DateTimeKind.Unspecified).AddTicks(7640), new TimeSpan(0, 3, 0, 0, 0))
-                        },
-                        new
-                        {
-                            Id = new Guid("48e06835-984b-48ba-8dd7-97a99092c77d"),
-                            CreatedAt = new DateTimeOffset(new DateTime(2022, 7, 17, 13, 3, 18, 771, DateTimeKind.Unspecified).AddTicks(7640), new TimeSpan(0, 3, 0, 0, 0)),
-                            ManufacturerId = new Guid("03618b30-ffa1-44cb-8bd7-94e1bab58ece"),
-                            Name = "Remo Djembe Bag Deluxe 14\"",
-                            UpdatedAt = new DateTimeOffset(new DateTime(2022, 7, 17, 13, 3, 18, 771, DateTimeKind.Unspecified).AddTicks(7640), new TimeSpan(0, 3, 0, 0, 0))
-                        });
                 });
 
             modelBuilder.Entity("EShop.Catalog.DAL.Entities.ProductCategory", b =>
